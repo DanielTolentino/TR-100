@@ -1,4 +1,4 @@
-# TR-100 Machine Report
+# TR-100 Machine Report (Ubuntu version)
 SKU: TR-100, filed under Technical Reports (TR).
 
 A machine information used at [United States Graphics Company](https://x.com/usgraphics)
