@@ -32,7 +32,7 @@ bar_graph() {
 
 # Operating System Information
 source /etc/os-release
-os_name="${ID^} ${VERSION^}"
+os_name="${PRETTY_NAME^} ${VERSION_CODENAME}"
 
 #os_name="${ID^} $(cat /etc/lsb-release) ${DISTRIB_CODENAME^}"
 os_kernel=$({
@@ -43,7 +43,7 @@ os_kernel=$({
 # Network Information
 net_current_user=$(whoami)
 net_hostname=$(hostname -f)
-net_machine_ip=$(hostname -I)
+net_machine_ip=$(hostname -I | awk '{print $2}')
 #net_client_ip=$(who am i --ips | awk '{print $5}')
 net_dns_ips=()
 while read -r line; do
